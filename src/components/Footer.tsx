@@ -91,7 +91,7 @@ const Footer = () => {
               <div className="flex items-center space-x-2 text-white/90 mb-4 md:mb-0">
                 <span>Credits -</span>
                 <a 
-                  href="https://github.com/SamparkBhol" 
+                  href="https://github.com/SamparkBhol/StarterSpark" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-white hover:text-primary-glow transition-colors underline font-semibold"
