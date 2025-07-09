@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Beginner-friendly portfolio design system - bright colors and gradients! */
+
+@layer base {
+  :root {
+    /* Improved color palette with better contrast */
+    --background: 0 0% 98%;
+    --foreground: 222 84% 4.9%;
+
+    /* Vibrant primary colors */
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 270 100% 80%;
+
+    /* Better contrast secondaries */
+    --secondary: 200 95% 85%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 35%;
+
+    /* Improved accent colors */
+    --accent: 142 76% 67%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 262 83% 58%;
+
+    --radius: 0.75rem;
+
+    /* Better gradient definitions */
+    --gradient-primary: linear-gradient(135deg, #8b5cf6, #06b6d4);
+    --gradient-secondary: linear-gradient(135deg, #10b981, #a855f7);
+    --gradient-hero: linear-gradient(135deg, #8b5cf6, #06b6d4, #10b981);
+    --gradient-card: linear-gradient(145deg, #ffffff, #f8fafc);
+    
+    /* VSCode-inspired colors */
+    --vscode-bg: 220 13% 18%;
+    --vscode-sidebar: 220 13% 16%;
+    --vscode-text: 220 14% 71%;
+    --vscode-keyword: 207 61% 59%;
+    --vscode-string: 95 38% 62%;
+    --vscode-comment: 220 10% 40%;
+
+    /* Fun animations and effects */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --shadow-glow: 0 0 30px rgba(139, 92, 246, 0.3);
+    --shadow-card: 0 10px 30px -10px rgba(139, 92, 246, 0.2);
+  }
+
+  .dark {
+    --background: 222 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --muted-foreground: 215 20% 65%;
+    --gradient-hero: linear-gradient(135deg, #8b5cf6, #06b6d4, #10b981);
+    --gradient-card: linear-gradient(145deg, #1e293b, #334155);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Beginner-style animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px hsl(var(--primary) / 0.3); }
+    50% { box-shadow: 0 0 40px hsl(var(--primary) / 0.6); }
+  }
+
+  @keyframes bounce-in {
+    0% { transform: scale(0.3) rotate(-10deg); opacity: 0; }
+    50% { transform: scale(1.05) rotate(5deg); }
+    100% { transform: scale(1) rotate(0deg); opacity: 1; }
+  }
+
+  @keyframes slide-in-right {
+    0% { transform: translateX(100px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+  }
+
+  @keyframes rainbow-border {
+    0% { border-color: hsl(262 83% 58%); }
+    25% { border-color: hsl(200 95% 85%); }
+    50% { border-color: hsl(142 76% 67%); }
+    75% { border-color: hsl(270 100% 80%); }
+    100% { border-color: hsl(262 83% 58%); }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-bounce-in {
+    animation: bounce-in 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 0.8s ease-out;
+  }
+
+  .animate-rainbow-border {
+    animation: rainbow-border 3s linear infinite;
+  }
+}
+
+@layer components {
+  /* Beginner-friendly component styles */
+  .card-gradient {
+    background: var(--gradient-card);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    transition: var(--transition-smooth);
+  }
+
+  .card-gradient:hover {
+    box-shadow: var(--shadow-card);
+    transform: translateY(-5px) scale(1.02);
+  }
+
+  .btn-primary {
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    padding: 12px 24px;
+    font-weight: 600;
+    transition: var(--transition-bounce);
+    box-shadow: 0 4px 15px hsl(var(--primary) / 0.3);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px hsl(var(--primary) / 0.4);
+  }
+
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .skill-circle {
+    background: var(--gradient-secondary);
+    border-radius: 50%;
+    padding: 16px;
+    color: white;
+    font-weight: 600;
+    transition: var(--transition-bounce);
+    box-shadow: 0 8px 20px hsl(var(--accent) / 0.3);
+  }
+
+  .skill-circle:hover {
+    transform: scale(1.15) rotate(5deg);
+    box-shadow: 0 12px 30px hsl(var(--accent) / 0.5);
+  }
+
+  .vscode-bg {
+    background-color: hsl(var(--vscode-bg));
+    color: hsl(var(--vscode-text));
+    font-family: 'Fira Code', 'Consolas', monospace;
+  }
+}
