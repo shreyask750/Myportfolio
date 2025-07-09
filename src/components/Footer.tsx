@@ -88,7 +88,7 @@ const Footer = () => {
           {/* Bottom Section */}
           <div className="border-t border-white/20 pt-8">
             <div className="flex flex-col md:flex-row items-center justify-between text-center md:text-left">
-              <div className="flex items-center space-x-1 mb-4 md:mb-0" style={{ fontSize: "10px" }}>
+              <div className="flex items-center space-x-1 mb-4 md:mb-0" style={{ fontSize: "11px" }}>
                 <span className="text-white/90">Credits -</span>
                 <a 
                   href="https://github.com/SamparkBhol/StarterSpark" 
