@@ -88,19 +88,16 @@ const Footer = () => {
           {/* Bottom Section */}
           <div className="border-t border-white/20 pt-8">
             <div className="flex flex-col md:flex-row items-center justify-between text-center md:text-left">
-              <div className="flex items-center space-x-2 text-white/90 mb-4 md:mb-0">
-                <span>Credits -</span>
-                  <p style={{ fontSize: "3px" }}>
-                    <a 
-                      href="https://github.com/SamparkBhol/StarterSpark" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-white hover:text-primary-glow transition-colors underline font-semibold"
-                    >
-                      Sampark Bhol
-                    </a>
-                  </p>
-
+              <div className="flex items-center space-x-1 mb-4 md:mb-0" style={{ fontSize: "3px" }}>
+                <span className="text-white/90">Credits -</span>
+                <a 
+                  href="https://github.com/SamparkBhol/StarterSpark" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-primary-glow transition-colors underline font-semibold"
+                >
+                  Sampark Bhol
+                </a>
               </div>
               
               <div className="text-white/70 text-sm">
