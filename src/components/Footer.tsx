@@ -90,18 +90,21 @@ const Footer = () => {
             <div className="flex flex-col md:flex-row items-center justify-between text-center md:text-left">
               <div className="flex items-center space-x-2 text-white/90 mb-4 md:mb-0">
                 <span>Credits -</span>
-                <a 
-                  href="https://github.com/SamparkBhol/StarterSpark" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-white hover:text-primary-glow transition-colors underline font-semibold"
-                >
-                  SamparkBhol
-                </a>
+                  <p style={{ fontSize: "3px" }}>
+                    <a 
+                      href="https://github.com/SamparkBhol/StarterSpark" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-white hover:text-primary-glow transition-colors underline font-semibold"
+                    >
+                      Sampark Bhol
+                    </a>
+                  </p>
+
               </div>
               
               <div className="text-white/70 text-sm">
-                <p>© 2024 - Portfolio v1.0 | Built with React & Tailwind CSS</p>
+                <p>© 2025 - Portfolio v7.0.6 | Built with React & Tailwind CSS</p>
               </div>
             </div>
             
