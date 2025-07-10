@@ -109,7 +109,7 @@ const Footer = () => {
             <div className="text-center mt-6">
               <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 inline-block">
                 <p className="text-white/80 text-sm">
-                  🎯 <strong>Portfolio v1.0</strong> - Built with passion and modern web technologies! 
+                  🎯 <strong>Portfolio v7.0.6</strong> - Built with passion and modern web technologies! 
                   React, TypeScript, and Tailwind CSS ⚡✨
                 </p>
               </div>
