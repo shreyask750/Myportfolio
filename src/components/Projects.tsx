@@ -49,7 +49,7 @@ const Projects = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-card">
+    <section className="py-20 bg-hacker text-green-300">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-bounce-in">
@@ -57,11 +57,11 @@ const Projects = () => {
               <Rocket className="w-8 h-8 text-primary animate-float" />
               <Star className="w-8 h-8 text-accent animate-float" style={{ animationDelay: '0.5s' }} />
             </div>
-            
-            <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-6">
+
+            <h2 className="text-4xl md:text-5xl font-bold text-green-400 mb-6">
               Cool Projects 🎯
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-green-500">
               Some awesome stuff I've built recently! ✨
             </p>
           </div>
@@ -70,7 +70,7 @@ const Projects = () => {
             {projects.map((project, index) => (
               <div 
                 key={index}
-                className="card-gradient p-6 rounded-2xl border-2 border-primary/20 animate-slide-in-right relative overflow-hidden group hover:border-accent/50 transition-all duration-500"
+                className="bg-[#0d0d0d] p-6 rounded-2xl border-2 border-green-700/30 animate-slide-in-right relative overflow-hidden group hover:border-green-500 transition-all duration-500"
                 style={{ animationDelay: `${index * 0.2}s` }}
                 onMouseEnter={() => project.isResearch && setHoveredPaper(true)}
                 onMouseLeave={() => project.isResearch && setHoveredPaper(false)}
@@ -78,16 +78,16 @@ const Projects = () => {
                 <div className="absolute top-0 right-0 text-8xl opacity-5 group-hover:opacity-10 transition-opacity">
                   {project.emoji}
                 </div>
-                
+
                 <div className="relative z-10">
                   <div className="flex items-center space-x-3 mb-4">
                     <div className={`p-3 rounded-full ${project.bgColor} group-hover:animate-bounce`}>
                       <project.icon className={`w-6 h-6 ${project.color}`} />
                     </div>
-                    <h3 className="text-xl font-bold text-gradient">{project.title}</h3>
+                    <h3 className="text-xl font-bold text-green-400">{project.title}</h3>
                   </div>
 
-                  <p className="text-foreground mb-6 leading-relaxed">
+                  <p className="text-green-200 mb-6 leading-relaxed">
                     {project.description}
                   </p>
 
@@ -95,10 +95,10 @@ const Projects = () => {
                     {project.points.map((point, pointIndex) => (
                       <div 
                         key={pointIndex}
-                        className="flex items-start space-x-2 group/point hover:bg-primary/5 p-2 rounded-lg transition-colors"
+                        className="flex items-start space-x-2 group/point hover:bg-green-900/20 p-2 rounded-lg transition-colors"
                       >
-                        <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2 group-hover/point:animate-bounce"></div>
-                        <p className="text-sm text-muted-foreground leading-relaxed">{point}</p>
+                        <div className="w-1.5 h-1.5 bg-green-400 rounded-full mt-2 group-hover/point:animate-bounce"></div>
+                        <p className="text-sm text-green-400 leading-relaxed">{point}</p>
                       </div>
                     ))}
                   </div>
@@ -110,7 +110,7 @@ const Projects = () => {
                           href={project.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="btn-primary inline-flex items-center space-x-2 text-sm animate-bounce-in"
+                          className="btn-primary inline-flex items-center space-x-2 text-sm animate-bounce-in text-green-300 hover:text-green-500"
                         >
                           <ExternalLink className="w-4 h-4" />
                           <span>📖 Read Paper</span>
@@ -120,7 +120,7 @@ const Projects = () => {
                   )}
 
                   <div className="mt-4 flex space-x-3">
-                    <div className="flex items-center space-x-1 text-sm text-muted-foreground">
+                    <div className="flex items-center space-x-1 text-sm text-green-500">
                       <Github className="w-4 h-4" />
                       <span>View on GitHub</span>
                     </div>
